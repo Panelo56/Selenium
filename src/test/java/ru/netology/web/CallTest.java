@@ -11,6 +11,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CallTest {
     private WebDriver driver;
 
+    @BeforeAll
+    static void setupAll() {
+        System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
+    }
+
     @BeforeEach
     void setUp() { driver = new ChromeDriver(); }
 
